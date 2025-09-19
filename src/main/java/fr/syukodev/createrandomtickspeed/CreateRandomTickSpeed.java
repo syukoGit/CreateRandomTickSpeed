@@ -44,8 +44,12 @@ public class CreateRandomTickSpeed {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // TODO: Implement common setup logic here in the future.
         LOGGER.info("HELLO FROM COMMON SETUP");
+        LOGGER.info("CreateRandomTickSpeed addon initialized");
+        LOGGER.info("SmartBlockEntity tick optimization: {}", Config.enableSmartBlockEntityOptimization ? "ENABLED" : "DISABLED");
+        if (Config.enableSmartBlockEntityOptimization) {
+            LOGGER.info("Tick skip pattern: 1 out of every {} ticks", Config.tickSkipPattern);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
