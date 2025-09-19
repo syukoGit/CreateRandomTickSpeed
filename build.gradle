@@ -10,6 +10,24 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
+    // NeoForge Maven
+    maven {
+        name = 'NeoForged'
+        url = 'https://maven.neoforged.net/releases'
+    }
+    // Create mod repository
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
+    }
+    // Additional repositories for Create dependencies
+    maven {
+        name = 'TerraformersMC'
+        url = 'https://maven.terraformersmc.com/'
+    }
 }
 
 base {
@@ -96,6 +114,12 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
 dependencies {
+    // Create mod dependency - required for addon functionality
+    implementation "maven.modrinth:create:${create_version}"
+    
+    // Spark profiler - debug only dependency
+    runtimeOnly "maven.modrinth:spark:${spark_version}"
+
     // Example mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
