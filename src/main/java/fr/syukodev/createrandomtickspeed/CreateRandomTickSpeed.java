@@ -44,7 +44,7 @@ public class CreateRandomTickSpeed {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // Some common setup code
+        // TODO: Implement common setup logic here in the future.
         LOGGER.info("HELLO FROM COMMON SETUP");
     }
 
