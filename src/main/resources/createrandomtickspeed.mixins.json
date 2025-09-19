@@ -4,6 +4,7 @@
   "package": "fr.syukodev.createrandomtickspeed.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "SmartBlockEntityMixin"
   ],
   "client": [
   ],

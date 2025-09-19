@@ -10,6 +10,7 @@ CreateRandomTickSpeed est un mod addon pour le mod Create qui offre la possibili
 
 - Contrôle dynamique de la vitesse de tick aléatoire
 - Intégration native avec le mod Create
+- **Optimisation des SmartBlockEntity**: Annule 1 tick sur 5 des entités de bloc intelligentes du mod Create pour améliorer les performances tout en maintenant la synchronisation des animations
 - Interface de configuration intuitive
 - Compatible avec les systèmes de débogage Spark
 
@@ -32,8 +33,14 @@ CreateRandomTickSpeed est un mod addon pour le mod Create qui offre la possibili
 
 Le mod dispose d'un système de configuration qui permet de :
 - Ajuster les paramètres de vitesse de tick
+- **Activer/désactiver l'optimisation des SmartBlockEntity** (activée par défaut)
+- **Configurer le motif de saut de ticks** (par défaut: 1 tick sauté sur 5)
 - Configurer les éléments de débogage
 - Personnaliser l'intégration avec Create
+
+### Options de configuration disponibles:
+- `enableSmartBlockEntityOptimization`: Active l'optimisation qui saute 1 tick sur 5 pour les SmartBlockEntity du mod Create
+- `tickSkipPattern`: Nombre de ticks à traiter avant de en sauter un (5 = sauter 1 tick sur 5)
 
 Les fichiers de configuration se trouvent dans le dossier `config` de votre instance Minecraft.
 
