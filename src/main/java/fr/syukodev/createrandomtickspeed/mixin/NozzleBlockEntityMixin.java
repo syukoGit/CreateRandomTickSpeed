@@ -19,7 +19,7 @@ import com.simibubi.create.content.kinetics.fan.NozzleBlockEntity;
 // optional Ponder classes at compile time. We target it by name in @Mixin.
 
 /**
- * Inject at the start of NozzleBlockEntity#tickServer to probabilistically
+ * Inject at the start of NozzleBlockEntity#tick to probabilistically
  * skip
  * heavy logic
  * while letting client animation sync happen naturally via Create's systems.
