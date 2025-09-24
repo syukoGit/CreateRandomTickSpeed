@@ -11,6 +11,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
@@ -45,8 +46,11 @@ public class CreateRandomTickSpeed {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // TODO: Implement common setup logic here in the future.
         LOGGER.info("HELLO FROM COMMON SETUP");
+    }
+
+    private void registerPayloads(final RegisterPayloadHandlersEvent event) {
+        fr.syukodev.createrandomtickspeed.network.NetworkHandler.register(event);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
