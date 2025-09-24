@@ -19,7 +19,7 @@ import com.simibubi.create.content.kinetics.deployer.DeployerBlockEntity;
 // optional Ponder classes at compile time. We target it by name in @Mixin.
 
 /**
- * Inject at the start of DeployerBlockEntity#tickServer to probabilistically
+ * Inject at the start of DeployerBlockEntity#tick to probabilistically
  * skip
  * heavy logic
  * while letting client animation sync happen naturally via Create's systems.
