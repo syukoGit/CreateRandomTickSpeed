@@ -4,9 +4,10 @@
   "package": "fr.syukodev.createrandomtickspeed.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "DeployerBlockEntityMixin",
+    "NozzleBlockEntityMixin"
   ],
-  "client": [
-  ],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   },

@@ -38,9 +38,9 @@ public class CreateRandomTickSpeed {
         // this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        // Register our mod's ModConfigSpec so that FML can create and load the config
-        // file for us
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        // Register our mod's ModConfigSpec as a SERVER config so it's saved per-world
+        // under the world's serverconfig folder (createrandomtickspeed-server.toml)
+        modContainer.registerConfig(ModConfig.Type.SERVER, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
